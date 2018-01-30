@@ -11,9 +11,7 @@
 
 There are a number of tasks to complete, mainly in the `SI364W18_HW3.py` file, in order to replicate **[this application](http://sample364hw3.herokuapp.com/)** locally.
 
-Each of the things you need to do is marked with a comment including **`TODO 364`**.
-
-For some, there are also hints.
+Each of the things you need to do is marked and described inside the `SI364W18_HW3.py` file, with a comment including **`TODO 364`**. For some, there are also hints provided.
 
 **NOTE:** If you don't already have your text editor set to *wrap* lines, you should change it so that it does -- that will make it MUCH easier to read the instructions. You can do that in the menu *View > Toggle Soft Wrap* in Atom and similar in Sublime Text.
 
@@ -31,8 +29,8 @@ However, that is *not* the order in which you should complete these tasks, becau
 
 **We recommend this approximate order of tasks:**
 
-* Consider and write/draw out the things you'll need to do and how data will move through the application. Make sure you understand the problem(s) at hand.
-* First do all the app setup. Make sure you've created a database, etc, and fill in that URL...
+* Consider and write/draw out the things you'll need to do and how data will move through the application. Make sure you understand the problem(s) at hand, and read through all the comments describing the assignment.
+* First do all the app setup. Make sure you've created a database, etc, and fill in that URL... 
 * Define the form and test it out.
 * Define your models.
 * Work on, and then test, your scaffolded view functions, including making the database queries (which you can also check with the Flask shell as shown in class!)

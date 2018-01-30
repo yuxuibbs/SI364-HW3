@@ -157,12 +157,13 @@ def see_all_users():
     # TODO 364: Fill in this view function so it can successfully render the template all_users.html, which is provided.
 
 # TODO 364
-# Create another route (no scaffolding provided) at /longest_tweet with a view function get_longest_tweet
+# Create another route (no scaffolding provided) at /longest_tweet with a view function get_longest_tweet (see details below for what it should do)
 # TODO 364
 # Create a template to accompany it called longest_tweet.html that extends from base.html.
 
 # NOTE:
 # This view function should compute and render a template (as shown in the sample application) that shows the text of the tweet currently saved in the database which has the most NON-WHITESPACE characters in it, and the username AND display name of the user that it belongs to.
+# NOTE: This is different (or could be different) from the tweet with the most characters including whitespace!
 # Any ties should be broken alphabetically (alphabetically by text of the tweet). HINT: Check out the chapter in the Python reference textbook on stable sorting.
 # Check out /longest_tweet in the sample application for an example.
 
