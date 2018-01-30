@@ -30,11 +30,11 @@ However, that is *not* the order in which you should complete these tasks, becau
 **We recommend this approximate order of tasks:**
 
 * Consider and write/draw out the things you'll need to do and how data will move through the application. Make sure you understand the problem(s) at hand, and read through all the comments describing the assignment.
-* First do all the app setup. Make sure you've created a database, etc, and fill in that URL... 
+* First do all the app setup. Make sure you've created a database, etc, and fill in that URL...
 * Define the form and test it out.
 * Define your models.
 * Work on, and then test, your scaffolded view functions, including making the database queries (which you can also check with the Flask shell as shown in class!)
-* Add the `longest_route` view function and corresponding template.
+* Add the `longest_tweet` view function and corresponding template.
 * Test it all again.
 
 
