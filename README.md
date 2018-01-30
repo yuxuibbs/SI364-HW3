@@ -9,7 +9,7 @@
 
 ## Instructions
 
-There are a number of tasks to complete, mainly in the `SI364W18_HW3.py` file, in order to replicate **[this application](sample364hw3.herokuapp.com/)** locally.
+There are a number of tasks to complete, mainly in the `SI364W18_HW3.py` file, in order to replicate **[this application](http://sample364hw3.herokuapp.com/)** locally.
 
 Each of the things you need to do is marked with a comment including **`TODO 364`**.
 
