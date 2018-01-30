@@ -9,11 +9,13 @@
 
 ## Instructions
 
-There are a number of tasks to complete, mainly in the `SI364W18_HW3.py` file, in order to replicate [this application](sample364hw3.herokuapp.com/) locally.
+There are a number of tasks to complete, mainly in the `SI364W18_HW3.py` file, in order to replicate **[this application](sample364hw3.herokuapp.com/)** locally.
 
 Each of the things you need to do is marked with a comment including **`TODO 364`**.
 
-For some, there are also hints!
+For some, there are also hints.
+
+**NOTE:** If you don't already have your text editor set to *wrap* lines, you should change it so that it does -- that will make it MUCH easier to read the instructions. You can do that in the menu *View > Toggle Soft Wrap* in Atom and similar in Sublime Text.
 
 The majority of the 1000 total points for this assignment come from, approximately in order:
 
@@ -42,15 +44,15 @@ However, that is *not* the order in which you should complete these tasks, becau
 
 ### Provided:
 
-* Custom error routes for 404 and 500 errors
-* Custom error templates
+* Custom errorhandler routes for 404 and 500 errors
+* Custom error templates 404.html and 500.html
 * Other templates:
     * `base.html` (the basis from which others inherit)
     * `index.html`
     * `all_users.html`
     * `all_tweets.html`
 * Necessary import statements and some parts of necessary app setup
-* Scaffolding comments
+* Scaffolding comments inside `SI364W18_HW3.py`
 
 ### You should add:
 
@@ -58,5 +60,8 @@ However, that is *not* the order in which you should complete these tasks, becau
 * Model class definitions
 * A bunch of code, as specified in the `SI364W18_HW3.py` file
 * 1 template (see the instructions for `longest_route` at the end of the .py file)
+* Comments at the top of your file specifying anyone with whom you worked on this HW
+
+**Important:** (This HW is not exactly like any from past semesters, but note that it is unethical to use others' work from this semester or other semesters or to look at old semester's work and use it as your own.)
 
 You should *not* change any file names or edit provided templates.
