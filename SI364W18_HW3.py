@@ -60,7 +60,7 @@ class Tweet(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('User.id'))
 
     def __repr__(self):
-        return '{Tweet %r} (ID: %r)' % self.text, self.user_id
+        return '{Tweet %s} (ID: %s)' % (self.text, self.user_id)
 
 # - User
 ## -- id (Integer, Primary Key)
@@ -79,7 +79,7 @@ class User(db.Model):
     tweet = db.relationship("Tweet", backref = db.backref('User', lazy = True))
 
     def __repr__(self):
-        return '{%r} | ID: {%r}' % self.username, self.display_name
+        return '{%s} | ID: {%s}' % (self.username, self.display_name)
 
 ########################
 ##### Set up Forms #####
@@ -197,16 +197,20 @@ def index():
 
 @app.route('/all_tweets')
 def see_all_tweets():
-    pass # Replace with code
     # TODO 364: Fill in this view function so that it can successfully render the template all_tweets.html, which is provided.
     # HINT: Careful about what type the templating in all_tweets.html is expecting! It's a list of... not lists, but...
     # HINT #2: You'll have to make a query for the tweet and, based on that, another query for the username that goes with it...
-
+    tweets = Tweet.query.all()
+    all_tweets = []
+    for tweet in tweets:
+        all_tweets.append((tweet.text, tweet.user_id))
+    return render_template('all_tweets.html', all_tweets = all_tweets)
 
 @app.route('/all_users')
 def see_all_users():
-    pass # Replace with code
     # TODO 364: Fill in this view function so it can successfully render the template all_users.html, which is provided.
+    users = User.query.all()
+    return render_template('all_users.html', users = users)
 
 # TODO 364
 # Create another route (no scaffolding provided) at /longest_tweet with a view function get_longest_tweet (see details below for what it should do)
@@ -223,7 +227,15 @@ def see_all_users():
 ## - Dictionary accumulation, the max value pattern
 ## - Sorting
 # may be useful for this problem!
-
+@app.route('/longest_tweet')
+def longest_tweet():
+    users = User.query.all()
+    tweet_info = []
+    for tweet in users:
+        tweet_info.append((len(tweet.tweet[0].text.replace(' ', '')), tweet.tweet[0].text, tweet.username, tweet.display_name))
+    # sorts by largest number and alphabetically
+    tweet_info.sort(key=lambda x : (-x[0], x[1]))
+    return render_template('longest_tweet.html', tweet = tweet_info[0][1], username = tweet_info[0][2], display_name = tweet_info[0][3])
 
 if __name__ == '__main__':
     db.create_all() # Will create any defined models when you run the application
