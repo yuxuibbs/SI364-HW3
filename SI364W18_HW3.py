@@ -203,7 +203,8 @@ def see_all_tweets():
     tweets = Tweet.query.all()
     all_tweets = []
     for tweet in tweets:
-        all_tweets.append((tweet.text, tweet.user_id))
+        user = User.query.filter_by(id = tweet.user_id).first()
+        all_tweets.append((tweet.text, user.username))
     return render_template('all_tweets.html', all_tweets = all_tweets)
 
 @app.route('/all_users')
